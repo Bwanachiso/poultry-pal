@@ -11,7 +11,7 @@ const ChatComponent: React.FC = () => {
 
     try {
       // Send user message to the Flask API
-      const response = await axios.post('/api/chat', { message: userMessage });
+      const response = await axios.post('http://127.0.0.1:5000/api/chat', { message: userMessage });
       const botReply = response.data.message;
 
       // Update chat history
